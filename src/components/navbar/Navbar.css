@@ -17,3 +17,13 @@
     font-size: 35px;
     cursor: pointer;
 }
+
+.navbar.dark{
+    background: rgb(36 42 56);
+
+}
+ 
+.navbar.dark .icon{
+    background: rgb(51 60 76);
+    color: rgb(158 175 201);
+}

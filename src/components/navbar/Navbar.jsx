@@ -9,11 +9,19 @@ import { AppContext } from '../../context';
 
 function Navbar(){
 
-    const {theme} = useContext(AppContext)
+    const {theme, setTheme} = useContext(AppContext)
+
+    const toggleTheme = () => {
+     if(theme == 'light') {
+        setTheme('dark')
+     }else{
+        setTheme('light')
+     }
+    }
 
     return(
-       <div className="navbar">
-        <div className="icon">
+       <div className={`navbar ${theme}`}>
+        <div className="icon" onClick={toggleTheme}>
             {theme =='dark' ? (<MdLightMode/>) : (<MdOutlineDarkMode/>)}
         </div>
        </div>
